@@ -1,53 +1,62 @@
-# Welcome to your Lovable project
+# React Component Library
 
-## Project info
+A modern, customizable React component library built with TypeScript, Vite, and Tailwind CSS. This project showcases a comprehensive collection of UI components using Shadcn/ui components.
 
-**URL**: https://lovable.dev/projects/053262db-be65-4ce4-a0ec-d46b1b174941
+## ✨ Features
 
-## How can I edit this code?
+- 🎨 **Modern Design**: Beautiful, accessible UI components
+- 🛠️ **TypeScript**: Full type safety and IntelliSense support
+- ⚡ **Vite**: Lightning-fast development and build process
+- 🎭 **Tailwind CSS**: Utility-first CSS framework for rapid styling
+- 📱 **Responsive**: Mobile-first responsive design
+- ♿ **Accessible**: Built with accessibility in mind
+- 🧩 **Modular**: Easily customizable and extendable components
 
-There are several ways of editing your application.
+## 🚀 Getting Started
 
-**Use Lovable**
+### Prerequisites
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/053262db-be65-4ce4-a0ec-d46b1b174941) and start prompting.
+Make sure you have Node.js installed on your machine. You can install it using [nvm](https://github.com/nvm-sh/nvm#installing-and-updating).
 
-Changes made via Lovable will be committed automatically to this repo.
+### Installation
 
-**Use your preferred IDE**
+1. Clone the repository:
+```bash
+git clone https://github.com/Kakarot30/React-Component.git
+```
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+2. Navigate to the project directory:
+```bash
+cd React-Component
+```
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+3. Install dependencies:
+```bash
+npm install
+```
 
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+4. Start the development server:
+```bash
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+The application will be available at `http://localhost:5173`
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## 🛠️ Available Scripts
 
-**Use GitHub Codespaces**
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run preview` - Preview production build
+- `npm run lint` - Run ESLint
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
+## 📦 Components Included
+
+This library includes a wide variety of components such as:
+- Buttons, Cards, Dialogs
+- Forms, Inputs, Selects
+- Navigation, Menus, Breadcrumbs
+- Tables, Pagination, Data displays
+- And many more...
 - Edit files directly within the Codespace and commit and push your changes once you're done.
 
 ## What technologies are used for this project?

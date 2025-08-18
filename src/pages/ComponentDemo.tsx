@@ -147,8 +147,11 @@ const ComponentDemo = () => {
           <h1 className="text-4xl font-bold text-foreground mb-4">
             React Component Library
           </h1>
-          <p className="text-xl text-muted-foreground">
-            Professional InputField and DataTable components with TypeScript support
+          <p className="text-xl text-muted-foreground mb-2">
+            A modern, customizable component library built with React & TypeScript
+          </p>
+          <p className="text-sm text-muted-foreground">
+            Created by <span className="font-semibold text-primary">Kakarot30</span> • Built with Shadcn/ui, Tailwind CSS & Vite
           </p>
         </div>
 
