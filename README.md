@@ -64,7 +64,6 @@ This library includes a wide variety of components such as:
 - And many more...
 - Edit files directly within the Codespace and commit and push your changes once you're done.
 
-## What technologies are used for this project?
 
 This project is built with:
 
@@ -73,15 +72,3 @@ This project is built with:
 - React
 - shadcn-ui
 - Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/053262db-be65-4ce4-a0ec-d46b1b174941) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
