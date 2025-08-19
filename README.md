@@ -21,21 +21,25 @@ Make sure you have Node.js installed on your machine. You can install it using [
 ### Installation
 
 1. Clone the repository:
+
 ```bash
 git clone https://github.com/Kakarot30/React-Component.git
 ```
 
 2. Navigate to the project directory:
+
 ```bash
 cd React-Component
 ```
 
 3. Install dependencies:
+
 ```bash
 npm install
 ```
 
 4. Start the development server:
+
 ```bash
 npm run dev
 ```
@@ -52,6 +56,7 @@ The application will be available at `http://localhost:5173`
 ## 📦 Components Included
 
 This library includes a wide variety of components such as:
+
 - Buttons, Cards, Dialogs
 - Forms, Inputs, Selects
 - Navigation, Menus, Breadcrumbs

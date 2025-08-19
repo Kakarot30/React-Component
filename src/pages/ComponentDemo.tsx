@@ -1,9 +1,15 @@
-import React, { useState } from 'react';
-import { InputField } from '@/components/ui/input-field';
-import { DataTable, Column } from '@/components/ui/data-table';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
+import React, { useState } from "react";
+import { InputField } from "@/components/ui/input-field";
+import { DataTable, Column } from "@/components/ui/data-table";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
 
 // Sample data for the table
 interface User {
@@ -11,60 +17,60 @@ interface User {
   name: string;
   email: string;
   role: string;
-  status: 'active' | 'inactive' | 'pending';
+  status: "active" | "inactive" | "pending";
   lastLogin: string;
 }
 
 const sampleUsers: User[] = [
   {
     id: 1,
-    name: 'Alice Johnson',
-    email: 'alice.johnson@company.com',
-    role: 'Admin',
-    status: 'active',
-    lastLogin: '2024-01-15'
+    name: "Alice Johnson",
+    email: "alice.johnson@company.com",
+    role: "Admin",
+    status: "active",
+    lastLogin: "2024-01-15",
   },
   {
     id: 2,
-    name: 'Bob Smith',
-    email: 'bob.smith@company.com',
-    role: 'Developer',
-    status: 'active',
-    lastLogin: '2024-01-14'
+    name: "Bob Smith",
+    email: "bob.smith@company.com",
+    role: "Developer",
+    status: "active",
+    lastLogin: "2024-01-14",
   },
   {
     id: 3,
-    name: 'Carol Davis',
-    email: 'carol.davis@company.com',
-    role: 'Designer',
-    status: 'inactive',
-    lastLogin: '2024-01-10'
+    name: "Carol Davis",
+    email: "carol.davis@company.com",
+    role: "Designer",
+    status: "inactive",
+    lastLogin: "2024-01-10",
   },
   {
     id: 4,
-    name: 'David Wilson',
-    email: 'david.wilson@company.com',
-    role: 'Manager',
-    status: 'pending',
-    lastLogin: '2024-01-12'
+    name: "David Wilson",
+    email: "david.wilson@company.com",
+    role: "Manager",
+    status: "pending",
+    lastLogin: "2024-01-12",
   },
   {
     id: 5,
-    name: 'Emma Brown',
-    email: 'emma.brown@company.com',
-    role: 'Developer',
-    status: 'active',
-    lastLogin: '2024-01-15'
-  }
+    name: "Emma Brown",
+    email: "emma.brown@company.com",
+    role: "Developer",
+    status: "active",
+    lastLogin: "2024-01-15",
+  },
 ];
 
 const ComponentDemo = () => {
   // Input field states
-  const [basicInput, setBasicInput] = useState('');
-  const [emailInput, setEmailInput] = useState('');
-  const [passwordInput, setPasswordInput] = useState('');
-  const [errorInput, setErrorInput] = useState('invalid@');
-  const [loadingInput, setLoadingInput] = useState('');
+  const [basicInput, setBasicInput] = useState("");
+  const [emailInput, setEmailInput] = useState("");
+  const [passwordInput, setPasswordInput] = useState("");
+  const [errorInput, setErrorInput] = useState("invalid@");
+  const [loadingInput, setLoadingInput] = useState("");
   const [isLoading, setIsLoading] = useState(false);
 
   // Table states
@@ -75,60 +81,61 @@ const ComponentDemo = () => {
   // Table columns
   const columns: Column<User>[] = [
     {
-      key: 'name',
-      title: 'Name',
-      dataIndex: 'name',
+      key: "name",
+      title: "Name",
+      dataIndex: "name",
       sortable: true,
     },
     {
-      key: 'email',
-      title: 'Email',
-      dataIndex: 'email',
+      key: "email",
+      title: "Email",
+      dataIndex: "email",
       sortable: true,
     },
     {
-      key: 'role',
-      title: 'Role',
-      dataIndex: 'role',
+      key: "role",
+      title: "Role",
+      dataIndex: "role",
       sortable: true,
     },
     {
-      key: 'status',
-      title: 'Status',
-      dataIndex: 'status',
+      key: "status",
+      title: "Status",
+      dataIndex: "status",
       sortable: true,
       render: (status: string) => {
-        const variant = {
-          active: 'default',
-          inactive: 'secondary',
-          pending: 'outline'
-        }[status as keyof typeof variant] || 'default';
-        
+        const variant =
+          {
+            active: "default",
+            inactive: "secondary",
+            pending: "outline",
+          }[status as keyof typeof variant] || "default";
+
         return (
           <Badge variant={variant as any}>
             {status.charAt(0).toUpperCase() + status.slice(1)}
           </Badge>
         );
-      }
+      },
     },
     {
-      key: 'lastLogin',
-      title: 'Last Login',
-      dataIndex: 'lastLogin',
+      key: "lastLogin",
+      title: "Last Login",
+      dataIndex: "lastLogin",
       sortable: true,
-    }
+    },
   ];
 
   const handleLoadingDemo = async () => {
     setIsLoading(true);
-    await new Promise(resolve => setTimeout(resolve, 3000));
+    await new Promise((resolve) => setTimeout(resolve, 3000));
     setIsLoading(false);
-    setLoadingInput('Loading complete!');
+    setLoadingInput("Loading complete!");
   };
 
   const handleTableLoadingDemo = async () => {
     setIsTableLoading(true);
-    await new Promise(resolve => setTimeout(resolve, 2000));
+    await new Promise((resolve) => setTimeout(resolve, 2000));
     setIsTableLoading(false);
   };
 
@@ -148,10 +155,13 @@ const ComponentDemo = () => {
             React Component Library
           </h1>
           <p className="text-xl text-muted-foreground mb-2">
-            A modern, customizable component library built with React & TypeScript
+            A modern, customizable component library built with React &
+            TypeScript
           </p>
           <p className="text-sm text-muted-foreground">
-            Created by <span className="font-semibold text-primary">Kakarot30</span> • Built with Shadcn/ui, Tailwind CSS & Vite
+            Created by{" "}
+            <span className="font-semibold text-primary">Kakarot30</span> •
+            Built with Shadcn/ui, Tailwind CSS & Vite
           </p>
         </div>
 
@@ -161,13 +171,16 @@ const ComponentDemo = () => {
             <CardHeader>
               <CardTitle>InputField Component</CardTitle>
               <CardDescription>
-                Flexible input component with multiple variants, states, and features
+                Flexible input component with multiple variants, states, and
+                features
               </CardDescription>
             </CardHeader>
             <CardContent className="space-y-6">
               {/* Basic Input */}
               <div>
-                <h4 className="text-sm font-medium mb-3">Basic Input (Outlined)</h4>
+                <h4 className="text-sm font-medium mb-3">
+                  Basic Input (Outlined)
+                </h4>
                 <InputField
                   label="Full Name"
                   placeholder="Enter your full name"
@@ -235,13 +248,13 @@ const ComponentDemo = () => {
                   loading={isLoading}
                   helperText="Demonstrates loading state with spinner"
                 />
-                <Button 
-                  onClick={handleLoadingDemo} 
+                <Button
+                  onClick={handleLoadingDemo}
                   disabled={isLoading}
                   className="mt-2"
                   size="sm"
                 >
-                  {isLoading ? 'Loading...' : 'Start Loading Demo'}
+                  {isLoading ? "Loading..." : "Start Loading Demo"}
                 </Button>
               </div>
 
@@ -287,7 +300,8 @@ const ComponentDemo = () => {
             <CardHeader>
               <CardTitle>DataTable Component</CardTitle>
               <CardDescription>
-                Feature-rich data table with sorting, selection, and loading states
+                Feature-rich data table with sorting, selection, and loading
+                states
               </CardDescription>
             </CardHeader>
             <CardContent className="space-y-6">
@@ -299,20 +313,12 @@ const ComponentDemo = () => {
                   size="sm"
                   variant="outline"
                 >
-                  {isTableLoading ? 'Loading...' : 'Demo Loading'}
+                  {isTableLoading ? "Loading..." : "Demo Loading"}
                 </Button>
-                <Button
-                  onClick={clearTableData}
-                  size="sm"
-                  variant="outline"
-                >
+                <Button onClick={clearTableData} size="sm" variant="outline">
                   Clear Data
                 </Button>
-                <Button
-                  onClick={restoreTableData}
-                  size="sm"
-                  variant="outline"
-                >
+                <Button onClick={restoreTableData} size="sm" variant="outline">
                   Restore Data
                 </Button>
               </div>
